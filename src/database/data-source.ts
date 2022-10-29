@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
-import { Task } from "./models/Task";
-import { User } from "./models/User";
+import { Task } from "../models/Task";
+import { User } from "../models/User";
 
 export const dataSource : DataSource = new DataSource({
     type: "postgres",

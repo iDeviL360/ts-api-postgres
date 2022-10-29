@@ -1,6 +1,4 @@
 import { Request, Response } from "express";
-import { json } from "stream/consumers";
-import { dataSource } from '../data-source';
 import { User } from "../models/User";
 
 
@@ -18,7 +16,8 @@ class UserController {
         } catch (error) {
             if(error instanceof Error) {
                 return res.status(500).json({
-                    message: error.message
+                    message: 'Internal Server Error',
+                    error: error.message
                 })
             }
         }
@@ -46,7 +45,8 @@ class UserController {
         } catch (error) {
             if(error instanceof Error) {
                 return res.status(500).json({
-                    message: error.message
+                    message: 'Internal Server Error',
+                    error: error.message
                 })
             }   
         }
@@ -73,7 +73,8 @@ class UserController {
 
             if(error instanceof Error) {
                 return res.status(500).json({
-                    message: error.message
+                    message: 'Internal Server Error',
+                    error: error.message
                 })
             }
         }
@@ -112,7 +113,8 @@ class UserController {
 
             if(error instanceof Error) {
                 return res.status(500).json({
-                    message: error.message
+                    message: 'Internal Server Error',
+                    error: error.message
                 })
             }
 
@@ -150,7 +152,8 @@ class UserController {
 
             if(error instanceof Error) {
                 return res.status(500).json({
-                    message: error.message
+                    message: 'Internal Server Error',
+                    error: error.message
                 })
             }
         }

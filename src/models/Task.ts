@@ -16,9 +16,8 @@ export class Task extends BaseEntity {
     @Column({ name: "description" })
     description : string;
 
-    @Column({ name: "user_id" })
-    @ManyToOne(type => User, {
-        cascade: true
+    @ManyToOne((type) => User, {
+        eager: true //propiedad que sirve para obtener los valores de la tabla del valor referenciado
     })
     @JoinColumn({
         name: "user_id",

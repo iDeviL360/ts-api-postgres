@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/user.routes';
+import taskRoutes from './routes/task.routes';
 
 
 const app: Application = express();
@@ -30,6 +31,7 @@ app.use(urlencoded({ extended: false }));
 
 //Routes
 app.use(userRoutes);
+app.use(taskRoutes);
 
 
 

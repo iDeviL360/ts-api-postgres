@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import app from "./app";
-import { dataSource } from "./data-source";
+import { dataSource } from "./database/data-source";
 
 
 async function main() {
@@ -11,6 +11,7 @@ async function main() {
         console.log(`Server is listening on port ${ app.get("port") }`);
     } catch (error : any) {
         console.log(error.message);
+        throw new Error(error.message);
     }
 
 }
